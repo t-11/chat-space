@@ -1,0 +1,48 @@
+.wrapper
+
+  = render 'shared/side_bar'
+
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ
+        %ul.left-header__members
+          Member：
+          %li.member
+            satou
+          %li.member
+            katou
+          %li.member
+            itou
+      .right-header
+        .right-header__button
+          Edit
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            satou
+          .upper-message__date
+            2020/05/15 09:00
+        .lower-meesage
+          .lower-message__content
+            ohayou
+      .message
+        .upper-message
+          .upper-message__user-name
+            katou
+          .upper-message__date
+            2020/05/15 09:10
+        .lower-meesage
+          .lower-message__content
+            ohayou
+      
+    .form
+      %form
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = icon('fa','image',class: 'icon')
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
