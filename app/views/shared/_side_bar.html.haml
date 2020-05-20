@@ -1,0 +1,27 @@
+.side-bar
+  .header
+    %h3.header__name
+      ユーザー
+    %ul.header__lists
+      %li.list
+        = link_to '#' do
+          = icon('fa', 'edit',class: 'icon')
+      %li.list
+        = link_to '#' do
+          = icon('fa', 'cog',class: 'icon')
+  .groups
+    .group
+      .group__name
+        A
+      .group__message
+        ohayou
+    .group
+      .group__name
+        B
+      .group__message
+        ohayou
+    .group
+      .group__name
+        C
+      .group__message
+        ohayou
