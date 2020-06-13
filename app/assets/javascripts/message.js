@@ -1,5 +1,5 @@
 $(function(){ 
-	function buildHTML(message){
+  function buildHTML(message){
 	 if ( message.image ) {
 		 var html =
 			`<div class="message">
