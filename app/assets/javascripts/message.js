@@ -1,6 +1,5 @@
 $(function(){ 
-
-	function buildHTML(message){
+  function buildHTML(message){
     if ( message.image ) {
         var html =
          `<div class="message" data-message-id=${message.id}>
@@ -59,12 +58,10 @@ $(function(){
     $('form')[0].reset();
     $('.form__submit').prop('disabled', false);
   })
-
   .fail(function() {
     alert("メッセージ送信に失敗しました");
   })
   })
-
   var reloadMessages = function() {
     var last_message_id = $('.message:last').data("message-id");
     $.ajax({
@@ -86,8 +83,8 @@ $(function(){
     .fail(function() {
       alert('error');
     });
-	};
-	if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-	setInterval(reloadMessages, 7000);
-	}
+  };
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+  setInterval(reloadMessages, 7000);
+  }
 });
