@@ -1,7 +1,11 @@
+
+* {
+  box-sizing: border-box;
+}
+
 .chat {
   width: calc(100% - 300px);
   .header {
-    box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
     .left-header {
@@ -24,12 +28,15 @@
     }
     .right-header {
       border: 1px solid $light_blue;
-      color: $light_blue;
       float: right;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
+    }
+    a {
+      text-decoration: none;
+      color: $light_blue;
     }
   }
 
@@ -37,7 +44,7 @@
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 46px 40px 0;
-    height: calc(100vh - 100px - 90px);
+    height: calc(100vh - 190px);
     overflow: scroll;
     .message {
       .upper-message {
@@ -65,13 +72,16 @@
   }
 
   .form {
-    background-color: #DDDDDD;
-    box-sizing: border-box;
+    background-color: #ddd;
     height: 90px;
-    padding: 20px 50px 20px 40px;
+    padding: 20px 40px;
+    .new_message{
+      display: flex;
+    }
     &__message {
       border: none;
-      float: left;
+      display: flex;
+      padding: 0 40px 0 10px;
       height: 50px;
       width: calc(100% - 150px);
     }
@@ -90,13 +100,14 @@
     }
     &__submit {
       background-color: $light_blue;
-      border: none;
       color: $white;
       float: right;
       font-size: 16px;
-      height: 50px;
       margin-left: 15px;
       padding: 0 30px;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
     }
   }
 }
