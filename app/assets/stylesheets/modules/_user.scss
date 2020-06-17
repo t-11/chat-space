@@ -7,7 +7,8 @@
     border: 1px solid #ddd;
     border-radius: 5px;
 
-    .account-page__inner--left, .account-page__inner--right {
+    .account-page__inner--left, 
+    .account-page__inner--right {
       float: left;
       width: 50%;
     }
@@ -26,7 +27,7 @@
       font-weight: 200;
 
       &:after {
-        content: '';
+        content: "";
         display: block;
         width: 60px;
         margin-top: 5px;
@@ -45,6 +46,7 @@
       color: #fff;
       background-color: #ccc;
       font-size: 14px;
+      text-decoration: none;
     }
   }
 

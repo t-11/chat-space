@@ -12,10 +12,9 @@ class MessagesController < ApplicationController
       respond_to do |format|
         format.json
       end
-
     else
       @messages = @group.messages.includes(:user)
-      flash.now[:alert] = 'メッセージを入力してください。'
+      flash.now[:alert] = 'メッセージを入力してください'
       render :index
     end
   end
@@ -28,5 +27,6 @@ class MessagesController < ApplicationController
 
   def set_group
     @group = Group.find(params[:group_id])
+
   end
 end

@@ -1,25 +1,26 @@
-.chat
-  .header
-    .left-header
-      .left-header__title
-        .group
-          = @group.name
-        %ul.left-header__members
-          Member：
+.main-chat
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        = @group.name
+      %ul.main-header__left-box__member-list
+        Member :
+        %li.main-header__left-box__member-list__member
           - @group.users.each do |user|
-            %li.member
-              = user.name
-    .right-header
-      .right-header__button
-        = link_to edit_group_path(@group) do
-          Edit
+            = user.name
+    = link_to edit_group_path(@group), class: "main-header__right" do
+      .main-header__right__edit-btn
+        Edit
   .messages
     = render @messages
+
+
   .form
+    .new-message
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit' 
+      .input-box
+        = f.text_field :content, class: "input-box__text", placeholder: "type a message"
+        = f.label :image, class: "input-box__image" do
+          = icon("far", "image")
+          = f.file_field :image, class: "input-box__image__file"
+      = f.submit 'Send', class: "submit-btn"
